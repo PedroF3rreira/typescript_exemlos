@@ -1,4 +1,4 @@
-var n1 = document.querySelector('#number1') as HTMLInputElement;
+var n1 = document.querySelector('#number1') as HTMLInputElement;//ajuda typescript a dar um tipo
 var n2 = document.querySelector('#number2') as HTMLInputElement;
 var button = document.querySelector('#calc') as HTMLElement;
 var result = document.querySelector('#result') as HTMLElement;
@@ -18,7 +18,10 @@ function firstLetterUppercase(name: string): string{
 }
 
 firstLetterUppercase('pedro');   
-//type personalizado
+/***
+ * type personalizado
+ * 
+ **/
 type User = {
     'name' : string,
     'age' : number | string
@@ -34,6 +37,10 @@ interface UserTwo{
     'altura' : 1.98
 }
 
+interface Order{
+    'os': string,
+    'status': 'peeding' | 'completed'
+}
 
 function addUser(user: User): boolean {
     if(user.age == null){
